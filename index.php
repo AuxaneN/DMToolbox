@@ -18,8 +18,7 @@
     <?php 
     include('php/dbAccess.php');
     $dbh->setAttribute(PDO::ATTR_ORACLE_NULLS,PDO::NULL_TO_STRING);
-    // CHARGE LA DB SELON LA CATEGORIE DEMANDEE
-    
+
     ?>
       <link rel="stylesheet" href="css/main.css">
 </head>
@@ -44,26 +43,24 @@
     </header>
     <div class="container-fluid">
         <div class="row mt-3">
-            <section id="sidebar" class="col-lg-3 col-sm-12">
-                <form action="#" method="GET">
-                    <ol>
-                        <li class="mt-3">
-                            <button class="nobutton" type="submit" name="category" id="map" value="map">Maps</button>
-                        </li>
-                        <li class="mt-3">
-                            <button class="nobutton" type="submit" name="category" id="item" value="item">Items</button>
-                        </li>
-                        <li class="mt-3">
-                             <button class="nobutton" type="submit" name="category" id="campaign" value="campaign">Campaigns</button>
-                        </li>
-                        <li class="mt-3">
-                            <button class="nobutton" type="submit" name="category" id="music" value="music">Music</button>
-                        </li>
-                        <li class="mt-3">
-                             <button class="nobutton" type="submit" name="category" id="gameplay" value="gameplay">Gameplay</button>
-                        </li>
-                    </ol>
-                </form>
+            <section id="sidebar" class="col-lg-3 col-sm-12 sticky-top">
+                <ol>
+                    <li class="mt-3">
+                        <a href="#map">Maps</a>
+                    </li>
+                    <li class="mt-3">
+                        <a href="#item">Items</a>
+                    </li>
+                    <li class="mt-3">
+                        <a href="#campaign"> Campaigns</a>
+                    </li>
+                    <li class="mt-3">
+                        <a href="#music">Music</a>
+                    </li>
+                    <li class="mt-3">
+                        <a href="#gameplay"> Gameplay</a>
+                    </li>
+                </ol>
             </section>
             <section class="col-lg-9 col-sm-12">
                 <div class="row">
@@ -72,48 +69,124 @@
                             This website is a mean for me to gather regroup all the tools I've used throughout my DM-ing times.
                             They include generators for names, dungeons, maps and encounters; campaigning tools; magic item lists as well as one shot campaigns.
                         </p>
-                        <h2 id="map">Maps</h2>
-                        <?PHP
-
                         
+                        <?PHP
                         $getInfo = $dbh->prepare("SELECT * FROM `websites` WHERE category = 'map'");                    
                         $getInfo->execute();
-                            foreach ($getInfo as $key => $value) { 
-                                    echo '
-                                    <div class="card mt-3">
-                                        <div class="card-body">
-                                            <h5 class="card-title">'.$value[1].' </h5>
-                                            <p class="card-text">'.$value[2].'</p>
-                                        </div>
-                                        <div class="card-footer">
-                                            <button type="button" class="btn btn-success" href="'.$value[3].'">Read more</button>
-                                        </div>
-                                    </div>';
-                                    
+                        echo '<h2 class="mt-4" id="map">Maps</h2>';
+                        foreach ($getInfo as $key => $value) { 
+                            echo '
+                            <div class="card mt-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">'.$value[1].' </h5>
+                                    <p class="card-text">'.$value[2].'</p>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="button" class="btn btn-success" href="'.$value[3].'">Read more</button>
+                                </div>
+                            </div>';
+                        };
+                        if(empty($value[1])){
+                            echo '
+                            <div class="card mt-3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-secondary">There are no elements in this category </h5>
+                                </div>
+                            </div>';
+                        }
                         $getInfo = $dbh->prepare("SELECT * FROM `websites` WHERE category = 'music'");
                         $getInfo->execute();
-
+                        echo '<h2 class="mt-4" id="music">Music</h2>';
+                        foreach ($getInfo as $key => $value) { 
+                            echo '
+                            <div class="card mt-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">'.$value[1].' </h5>
+                                    <p class="card-text">'.$value[2].'</p>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="button" class="btn btn-success" href="'.$value[3].'">Read more</button>
+                                </div>
+                            </div>';
+                        };
+                        if(empty($value[1])){
+                            echo '
+                            <div class="card mt-3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-secondary">There are no elements in this category </h5>
+                                </div>
+                            </div>';
+                        }
                         $getInfo = $dbh->prepare("SELECT * FROM `websites` WHERE category = 'campaign'");
                         $getInfo->execute();
-
+                        echo '<h2 class="mt-4" id="campaign">Campaign</h2>';
+                        foreach ($getInfo as $key => $value) { 
+                            echo '
+                            <div class="card mt-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">'.$value[1].' </h5>
+                                    <p class="card-text">'.$value[2].'</p>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="button" class="btn btn-success" href="'.$value[3].'">Read more</button>
+                                </div>
+                            </div>';
+                        };
+                        if(empty($value[1])){
+                            echo '
+                            <div class="card mt-3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-secondary">There are no elements in this category </h5>
+                                </div>
+                            </div>';
+                        }
                         $getInfo = $dbh->prepare("SELECT * FROM `websites` WHERE category = 'gameplay'");
                         $getInfo->execute();
-
+                        echo '<h2 class="mt-4" id="gameplay">Gameplay</h2>';
+                        foreach ($getInfo as $key => $value) { 
+                            echo '
+                            <div class="card mt-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">'.$value[1].' </h5>
+                                    <p class="card-text">'.$value[2].'</p>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="button" class="btn btn-success" href="'.$value[3].'">Read more</button>
+                                </div>
+                            </div>';
+                        };
+                        if(empty($value[1])){
+                            echo '
+                            <div class="card mt-3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-secondary">There are no elements in this category </h5>
+                                </div>
+                            </div>';
+                        }
                         $getInfo = $dbh->prepare("SELECT * FROM `websites` WHERE category = 'item'");
                         $getInfo->execute();
-                        
-                        $getInfo = $dbh->prepare("SELECT * FROM `websites`");
-                        $getInfo->execute();
-                                    
-                            };
-                            if(empty($value[1])){
-                                echo '
-                                <div class="card mt-3">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-secondary">There are no elements in this category </h5>
-                                    </div>
-                                </div>';
-                            }
+                        echo '<h2 class="mt-4" id="item">Item</h2>';
+                        foreach ($getInfo as $key => $value) { 
+                            echo '
+                            <div class="card mt-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">'.$value[1].' </h5>
+                                    <p class="card-text">'.$value[2].'</p>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="button" class="btn btn-success" href="'.$value[3].'">Read more</button>
+                                </div>
+                            </div>';
+
+                        };
+                        if(empty($value[1])){
+                            echo '
+                            <div class="card mt-3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-secondary">There are no elements in this category </h5>
+                                </div>
+                            </div>';
+                        }
                         ?>
                     </section>
                 </div>
