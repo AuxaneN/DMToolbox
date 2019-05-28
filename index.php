@@ -23,8 +23,8 @@
       <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand">DM Toolbox</a>
             <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -43,7 +43,7 @@
     </header>
     <div class="container-fluid">
         <div class="row mt-3">
-            <section id="sidebar" class="col-lg-3 col-sm-12 sticky-top">
+            <section id="sidebar" class="col-lg-3 col-sm-12">
                 <ol>
                     <li class="mt-3">
                         <a href="#map">Maps</a>
@@ -64,7 +64,7 @@
             </section>
             <section class="col-lg-9 col-sm-12">
                 <div class="row">
-                    <section class="offset-lg-1 col-lg-8">
+                    <section class="offset-lg-4 col-lg-8">
                         <p>
                             This website is a mean for me to gather regroup all the tools I've used throughout my DM-ing times.
                             They include generators for names, dungeons, maps and encounters; campaigning tools; magic item lists as well as one shot campaigns.

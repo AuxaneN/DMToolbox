@@ -18,3 +18,12 @@ ol{
 .card-title{
     font-weight: 500;
 }
+.container{
+    position: relative;
+}
+#sidebar{
+    position: fixed;
+    top: calc(100%-56px);
+    left:0px;
+    z-index: 99;
+}
