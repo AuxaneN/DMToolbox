@@ -19,20 +19,6 @@
     include('php/dbAccess.php');
     $dbh->setAttribute(PDO::ATTR_ORACLE_NULLS,PDO::NULL_TO_STRING);
     // CHARGE LA DB SELON LA CATEGORIE DEMANDEE
-    if($_GET['category'] === 'map'){
-        $getInfo = $dbh->prepare("SELECT * FROM `websites` WHERE category = 'map'");
-    }else if ($_GET['category'] === 'music'){
-        $getInfo = $dbh->prepare("SELECT * FROM `websites` WHERE category = 'music'");
-    }else if ($_GET['category'] === 'campaign'){
-        $getInfo = $dbh->prepare("SELECT * FROM `websites` WHERE category = 'campaign'");
-    }else if ($_GET['category'] === 'gameplay'){
-        $getInfo = $dbh->prepare("SELECT * FROM `websites` WHERE category = 'gameplay'");
-    }else if ($_GET['category'] ==='item'){
-        $getInfo = $dbh->prepare("SELECT * FROM `websites` WHERE category = 'item'");
-    }else{
-        $getInfo = $dbh->prepare("SELECT * FROM `websites`");}
-    
-    $getInfo->execute();
     
     ?>
       <link rel="stylesheet" href="css/main.css">
@@ -86,8 +72,12 @@
                             This website is a mean for me to gather regroup all the tools I've used throughout my DM-ing times.
                             They include generators for names, dungeons, maps and encounters; campaigning tools; magic item lists as well as one shot campaigns.
                         </p>
+                        <h2 id="map">Maps</h2>
+                        <?PHP
 
-                        <?PHP 
+                        
+                        $getInfo = $dbh->prepare("SELECT * FROM `websites` WHERE category = 'map'");                    
+                        $getInfo->execute();
                             foreach ($getInfo as $key => $value) { 
                                     echo '
                                     <div class="card mt-3">
@@ -100,7 +90,20 @@
                                         </div>
                                     </div>';
                                     
-                                
+                        $getInfo = $dbh->prepare("SELECT * FROM `websites` WHERE category = 'music'");
+                        $getInfo->execute();
+
+                        $getInfo = $dbh->prepare("SELECT * FROM `websites` WHERE category = 'campaign'");
+                        $getInfo->execute();
+
+                        $getInfo = $dbh->prepare("SELECT * FROM `websites` WHERE category = 'gameplay'");
+                        $getInfo->execute();
+
+                        $getInfo = $dbh->prepare("SELECT * FROM `websites` WHERE category = 'item'");
+                        $getInfo->execute();
+                        
+                        $getInfo = $dbh->prepare("SELECT * FROM `websites`");
+                        $getInfo->execute();
                                     
                             };
                             if(empty($value[1])){
