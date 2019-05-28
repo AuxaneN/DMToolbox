@@ -33,7 +33,6 @@
         $getInfo = $dbh->prepare("SELECT * FROM `websites`");}
     
     $getInfo->execute();
-    var_dump($_GET['category']);
     
     ?>
       <link rel="stylesheet" href="css/main.css">
@@ -51,7 +50,7 @@
                         <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Item 2</a>
+                        <a class="nav-link disabled" href="contact.php" tabindex="-1" aria-disabled="true">Add to the list</a>
                     </li>
                 </ul>
             </div>
