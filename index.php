@@ -42,6 +42,11 @@
         </nav>
     </header>
     <div class="container-fluid">
+        <div class="row">
+            <div class="col-1 offset-11" id="backTop">
+            <a href="#sidebar"><img src="octicons/package/build/svg/arrow-up.svg" alt=""></a>
+            </div>
+        </div>
         <div class="row mt-3">
             <section id="sidebar" class="col-lg-3 col-sm-12">
                 <ol>
@@ -66,7 +71,7 @@
                 <div class="row">
                     <section class="offset-lg-4 col-lg-8">
                         <p>
-                            This website is a mean for me to gather regroup all the tools I've used throughout my DM-ing times.
+                            This website is a mean for me to gather and regroup all the tools I've used throughout my DM-ing times.
                             They include generators for names, dungeons, maps and encounters; campaigning tools; magic item lists as well as one shot campaigns.
                         </p>
                         
@@ -82,7 +87,7 @@
                                     <p class="card-text">'.$value[2].'</p>
                                 </div>
                                 <div class="card-footer">
-                                    <button type="button" class="btn btn-success" href="'.$value[3].'">Read more</button>
+                                    <button type="button" class="btn btn-success" href="'.$value[3].'">Check it out</button>
                                 </div>
                             </div>';
                         };
@@ -105,7 +110,7 @@
                                     <p class="card-text">'.$value[2].'</p>
                                 </div>
                                 <div class="card-footer">
-                                    <button type="button" class="btn btn-success" href="'.$value[3].'">Read more</button>
+                                    <button type="button" class="btn btn-success" href="'.$value[3].'">Check it out</button>
                                 </div>
                             </div>';
                         };
@@ -128,7 +133,7 @@
                                     <p class="card-text">'.$value[2].'</p>
                                 </div>
                                 <div class="card-footer">
-                                    <button type="button" class="btn btn-success" href="'.$value[3].'">Read more</button>
+                                    <button type="button" class="btn btn-success" href="'.$value[3].'">Check it out</button>
                                 </div>
                             </div>';
                         };
@@ -151,7 +156,7 @@
                                     <p class="card-text">'.$value[2].'</p>
                                 </div>
                                 <div class="card-footer">
-                                    <button type="button" class="btn btn-success" href="'.$value[3].'">Read more</button>
+                                    <button type="button" class="btn btn-success" href="'.$value[3].'">Check it out</button>
                                 </div>
                             </div>';
                         };
@@ -174,7 +179,7 @@
                                     <p class="card-text">'.$value[2].'</p>
                                 </div>
                                 <div class="card-footer">
-                                    <button type="button" class="btn btn-success" href="'.$value[3].'">Read more</button>
+                                    <button type="button" class="btn btn-success" href="'.$value[3].'">Check it out</button>
                                 </div>
                             </div>';
 

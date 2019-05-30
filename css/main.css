@@ -27,3 +27,38 @@ ol{
     left:0px;
     z-index: 99;
 }
+#backTop{
+    position: fixed;
+    bottom:50px;
+    right:50px;
+    z-index: 99;
+}
+#backTop img{
+    width: 20px;
+}
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 988px) {
+    section#sidebar{
+        display: inline-block;
+        position: relative;
+     }
+        ol{
+            width:90vw;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-around;
+            padding:0px        }
+        li{
+            display: inline;
+        }
+}
+ /* Small devices (landscape phones, 576px and up) */
+ @media (max-width: 576px) { 
+    section#sidebar{
+        display:none;
+     }
+ }
+
+
