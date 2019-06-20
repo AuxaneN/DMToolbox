@@ -87,7 +87,7 @@
                                     <p class="card-text">'.$value[2].'</p>
                                 </div>
                                 <div class="card-footer">
-                                    <button type="button" class="btn btn-success" href="'.$value[3].'">Check it out</button>
+                                    <button type="button" class="btn btn-success"><a href="'.$value[3].'" target="_blank">Check it out</a></button>
                                 </div>
                             </div>';
                         };
@@ -110,7 +110,7 @@
                                     <p class="card-text">'.$value[2].'</p>
                                 </div>
                                 <div class="card-footer">
-                                    <button type="button" class="btn btn-success" href="'.$value[3].'">Check it out</button>
+                                    <button type="button" class="btn btn-success"><a href="'.$value[3].'" target="_blank">Check it out</a></button>
                                 </div>
                             </div>';
                         };
@@ -133,7 +133,7 @@
                                     <p class="card-text">'.$value[2].'</p>
                                 </div>
                                 <div class="card-footer">
-                                    <button type="button" class="btn btn-success" href="'.$value[3].'">Check it out</button>
+                                    <button type="button" class="btn btn-success"><a href="'.$value[3].'" target="_blank">Check it out</a></button>
                                 </div>
                             </div>';
                         };
@@ -156,7 +156,7 @@
                                     <p class="card-text">'.$value[2].'</p>
                                 </div>
                                 <div class="card-footer">
-                                    <button type="button" class="btn btn-success" href="'.$value[3].'">Check it out</button>
+                                    <button type="button" class="btn btn-success"><a href="'.$value[3].'" target="_blank">Check it out</a></button>
                                 </div>
                             </div>';
                         };
@@ -179,7 +179,7 @@
                                     <p class="card-text">'.$value[2].'</p>
                                 </div>
                                 <div class="card-footer">
-                                    <button type="button" class="btn btn-success" href="'.$value[3].'">Check it out</button>
+                                    <button type="button" class="btn btn-success"><a href="'.$value[3].'" target="_blank">Check it out</a></button>
                                 </div>
                             </div>';
 
