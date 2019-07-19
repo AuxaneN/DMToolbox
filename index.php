@@ -18,7 +18,6 @@
     <?php 
     include('php/dbAccess.php');
     $dbh->setAttribute(PDO::ATTR_ORACLE_NULLS,PDO::NULL_TO_STRING);
-
     ?>
       <link rel="stylesheet" href="css/main.css">
 </head>
@@ -44,7 +43,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-1 offset-11" id="backTop">
-            <a href="#sidebar"><img src="octicons/package/build/svg/arrow-up.svg" alt=""></a>
+
             </div>
         </div>
         <div class="row mt-3">
