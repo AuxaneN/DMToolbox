@@ -5,17 +5,60 @@
 ol{
     list-style: none;
 }
-li{
+
+#sidebar li a {
     font-size: 1.6em;
+    text-decoration: none;
     color: #133337;
 }
-li:hover{
-    opacity:0.5;
-    cursor: pointer;
+#sidebar a:hover{
+    opacity: 0.5;
+    text-decoration: none;
 }
 .card-title{
     font-weight: 500;
 }
-.nobutton{
-    border:none !important;
-    background: transparent;}
+.container{
+    position: relative;
+}
+#sidebar{
+    position: fixed;
+    top: calc(100%-56px);
+    left:0px;
+    z-index: 99;
+}
+#backTop{
+    position: fixed;
+    bottom:50px;
+    right:50px;
+    z-index: 99;
+}
+#backTop img{
+    width: 20px;
+}
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 988px) {
+    section#sidebar{
+        display: inline-block;
+        position: relative;
+     }
+        ol{
+            width:90vw;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-around;
+            padding:0px        }
+        li{
+            display: inline;
+        }
+}
+ /* Small devices (landscape phones, 576px and up) */
+ @media (max-width: 576px) { 
+    section#sidebar{
+        display:none;
+     }
+ }
+
+
