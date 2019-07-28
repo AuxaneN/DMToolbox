@@ -24,7 +24,8 @@
 <body>
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand">DM Toolbox</a>
+
+            <a class="navbar-brand"><img src="img/DMTB.png" alt="DM's Toolbox">DM's Toolbox</a>
             <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,9 +34,25 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
                     </li>
+                    <div class="nav-item mobileHide">
+                        <a class="nav-link" href="#map">Maps</a>
+                    </div>
+                    <div class="nav-item mobileHide">
+                        <a class="nav-link" href="#item">Items</a>
+                    </div>
+                    <div class="nav-item mobileHide">
+                        <a class="nav-link" href="#campaign"> Campaigns</a>
+                    </div>
+                    <div class="nav-item mobileHide">
+                        <a class="nav-link" href="#music">Music</a>
+                    </div>
+                    <div class="nav-item mobileHide">
+                        <a class="nav-link" href="#gameplay"> Gameplay</a>
+                    </div>
                     <li class="nav-item">
                         <a class="nav-link disabled" href="contact.php" tabindex="-1" aria-disabled="true">Add to the list</a>
                     </li>
+
                 </ul>
             </div>
         </nav>
