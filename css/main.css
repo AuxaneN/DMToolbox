@@ -36,23 +36,35 @@ ol{
 #backTop img{
     width: 20px;
 }
+.navbar-brand img {
+    width: 40px;
+}
+.navbar-brand img{
+    margin-right: 20px;
+}
+.mobileHide{display: none;}
+
+.btn.btn-success a{
+    color:white;
+    text-decoration: none;
+}
+.btn.btn-success{
+    background-color: #98D3B8;
+    border-color:#98D3B8;
+}
+.btn.btn-success:hover{
+    background-color: rgb(88, 155, 125);
+    border-color:rgb(88, 155, 125);
+}
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 988px) {
     section#sidebar{
-        display: inline-block;
+        display: none;
         position: relative;
      }
-        ol{
-            width:90vw;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            align-items: center;
-            justify-content: space-around;
-            padding:0px        }
-        li{
-            display: inline;
-        }
+    .mobileHide{
+            display:inline-block;
+    }
 }
  /* Small devices (landscape phones, 576px and up) */
  @media (max-width: 576px) { 
